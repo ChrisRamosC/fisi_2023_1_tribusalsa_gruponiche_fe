@@ -61,7 +61,7 @@ class RetarAmigo : AppCompatActivity(), OnAmigosLoadedListener {
     }
 
     fun obtenerAmigos(){
-        AmigoProvider.getAmigosbyUserID(1, this)
+        AmigoProvider.getAmigosbyUserID(7, this)
     }
 
 }
