@@ -19,7 +19,7 @@ class AmigoProvider {
                     val lista = response.body()!!
                     val amigos = mutableListOf<Amigo>()
                     for(u in lista) {
-                        amigos.add(Amigo(u.nombre, u.imagen))
+                        amigos.add(Amigo(u.nombre))
                     }
                     listener.onAmigosLoaded(amigos)
                 }
