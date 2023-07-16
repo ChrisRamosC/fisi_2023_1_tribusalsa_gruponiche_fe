@@ -40,7 +40,7 @@ class ComenzarRutina : AppCompatActivity(), OnEjerciciosLoadedListener {
             binding.tvDescripcion.text = dato.descripcion
             binding.tvNombreRutina.text = dato.nombreRutina
             binding.tvInfoRutina.text =
-                dato.nivelRutina.capitalize(Locale.ROOT) + ": " + dato.duracionRutina.toInt()
+                dato.nivelRutina.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() } + ": " + dato.duracionRutina.toInt()
                     .toString() + " ejercicios - " + dato.duracionRutina.toInt()
                     .toString() + " min"
 

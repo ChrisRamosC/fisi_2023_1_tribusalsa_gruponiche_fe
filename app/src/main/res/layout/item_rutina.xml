@@ -10,18 +10,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
             android:id="@+id/ivRutina"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="200dp"
             android:alpha="0.5"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/gris"
-            app:layout_constraintStart_toStartOf="parent"
-            android:scaleType="fitXY"
+            android:background="@drawable/borde_redondeado"
             android:clipToOutline="true"
             android:outlineProvider="background"
-            android:background="@drawable/borde_redondeado"/>
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/gris" />
 
         <TextView
             android:layout_marginTop="100dp"

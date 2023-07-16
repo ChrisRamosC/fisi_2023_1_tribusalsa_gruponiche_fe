@@ -42,7 +42,7 @@ class Objetivo : AppCompatActivity() {
         btnFlechaNivel.setOnClickListener {
             // Al menos un radio button ha sido seleccionado y el edit text no está vacío
 
-            val radioButtonId: Int =  rdGroupObjetivo.getCheckedRadioButtonId()
+            val radioButtonId: Int =  rdGroupObjetivo.checkedRadioButtonId
             val radioButton2: RadioButton =  rdGroupObjetivo.findViewById(radioButtonId)
             radioButtonText = radioButton2.text.toString()
 
@@ -105,24 +105,30 @@ class Objetivo : AppCompatActivity() {
         var rdGroupObjetivo=findViewById<RadioGroup>(R.id.radioGroupObjetivo)
 
         // Al menos un radio button ha sido seleccionado y el edit text no está vacío
-        val radioButtonId: Int = rdGroupObjetivo.getCheckedRadioButtonId()
+        val radioButtonId: Int = rdGroupObjetivo.checkedRadioButtonId
         val radioButton: View = rdGroupObjetivo.findViewById(radioButtonId)
         val radioButton2: RadioButton = rdGroupObjetivo.findViewById(radioButtonId)
-        var objetivo=radioButton2.text.toString().toLowerCase(Locale.getDefault()).replace("\n", " ")
+        var objetivo= radioButton2.text.toString().lowercase(Locale.getDefault()).replace("\n", " ")
 //              Recuperar un valor String almacenado
         var genero= sharedPreferences.getString("genero_seleccionado", "")
         var edad= sharedPreferences.getString("texto_ingresado","")
         var zona=""
         if(genero=="Hombre"){
             genero="M"
-             zona=sharedPreferences.getString("zona-seleccionado-hombre","").toString().toLowerCase(Locale.getDefault()).replace("\n", " ")
+             zona= sharedPreferences.getString("zona-seleccionado-hombre","").toString()
+                 .lowercase(Locale.getDefault())
+                 .replace("\n", " ")
         }else{
             genero="F"
-             zona=sharedPreferences.getString("zona-seleccionado-mujer","").toString().toLowerCase(Locale.getDefault()).replace("\n", " ")
+             zona= sharedPreferences.getString("zona-seleccionado-mujer","").toString()
+                 .lowercase(Locale.getDefault())
+                 .replace("\n", " ")
         }
         var talla= sharedPreferences.getString("texto_ingresado-talla", "")
         var peso=  sharedPreferences.getString("texto_ingresado-peso", "")
-        var nivel= sharedPreferences.getString("nivel_seleccionado", "").toString().toLowerCase(Locale.getDefault()).replace("\n", " ")
+        var nivel= sharedPreferences.getString("nivel_seleccionado", "").toString()
+            .lowercase(Locale.getDefault())
+            .replace("\n", " ")
 
         // Obtener una instancia de Shared Preferences
         val sharedPreferences2 = getSharedPreferences("usuario", Context.MODE_PRIVATE)

@@ -28,7 +28,7 @@ class ZonaObjetivoHombre : AppCompatActivity() {
         val btnFlechaAtras=findViewById<ImageView>(R.id.flechaAtrasDatosPersonales)
         btnFlechaAtras.setOnClickListener {
 
-            val radioButtonId: Int =rdZonaHombre.getCheckedRadioButtonId()
+            val radioButtonId: Int =rdZonaHombre.checkedRadioButtonId
             val radioButton: View = rdZonaHombre.findViewById(radioButtonId)
             val radioButton2: RadioButton = rdZonaHombre.findViewById(radioButtonId)
             radioButtonText = radioButton2.text.toString()
@@ -44,7 +44,7 @@ class ZonaObjetivoHombre : AppCompatActivity() {
         val btnSiguienteMetricas=findViewById<Button>(R.id.btnSiguienteMetricasHombre)
         btnSiguienteMetricas.setOnClickListener {
             if (rdZonaHombre.checkedRadioButtonId != -1) {
-                val radioButtonId: Int =rdZonaHombre.getCheckedRadioButtonId()
+                val radioButtonId: Int =rdZonaHombre.checkedRadioButtonId
                 val radioButton: View = rdZonaHombre.findViewById(radioButtonId)
                 val radioButton2: RadioButton = rdZonaHombre.findViewById(radioButtonId)
                 radioButtonText = radioButton2.text.toString()

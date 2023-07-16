@@ -24,7 +24,7 @@ class EjercicioAdapter(
     override fun onBindViewHolder(holder: EjercicioViewHolder, position: Int) {
         val item = ejercicioList[position]
         holder.render(item, onClickListener)
-        holder.itemView.setOnClickListener() {
+        holder.itemView.setOnClickListener {
             showDialogInformacion(position)
         }
     }
@@ -48,7 +48,7 @@ class EjercicioAdapter(
         val dialog = builder.create()
         dialog.show()
 
-        view.findViewById<ImageView>(R.id.btn_cerrar).setOnClickListener() {
+        view.findViewById<ImageView>(R.id.btn_cerrar).setOnClickListener {
             dialog.dismiss()
         }
 

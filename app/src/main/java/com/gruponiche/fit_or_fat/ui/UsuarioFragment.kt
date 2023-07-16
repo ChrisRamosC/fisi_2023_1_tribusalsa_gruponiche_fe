@@ -13,11 +13,11 @@ class UsuarioFragment : Fragment(R.layout.fragment_usuario) {
         val btnRetar = requireView().findViewById<Button>(R.id.btnRetarAmigoUsuario)
         val btnConfig = requireView().findViewById<Button>(R.id.btnVerConfigUsuario)
 
-        btnRetar.setOnClickListener(){
+        btnRetar.setOnClickListener {
             goToRetarAmigo()
         }
 
-        btnConfig.setOnClickListener(){
+        btnConfig.setOnClickListener {
             goToConfigUsuario()
         }
 
@@ -32,11 +32,11 @@ class UsuarioFragment : Fragment(R.layout.fragment_usuario) {
     */
 
     private fun goToConfigUsuario(){
-        val intent = Intent (getActivity(), VisualizarConfigUsuario::class.java)
-        getActivity()?.startActivity(intent)
+        val intent = Intent (activity, VisualizarConfigUsuario::class.java)
+        activity?.startActivity(intent)
     }
     private fun goToRetarAmigo(){
-        val intent = Intent (getActivity(), RetarAmigo::class.java)
+        val intent = Intent (activity, RetarAmigo::class.java)
         startActivity(intent)
     }
 

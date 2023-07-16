@@ -31,7 +31,7 @@ class DatosPersonales :  AppCompatActivity()   {
         flechaAtras.setOnClickListener{
 
             // Al menos un radio button ha sido seleccionado y el edit text no está vacío
-            val radioButtonId: Int = rdGroupGenero.getCheckedRadioButtonId()
+            val radioButtonId: Int = rdGroupGenero.checkedRadioButtonId
             val radioButton: View = rdGroupGenero.findViewById(radioButtonId)
             val radioButton2: RadioButton = rdGroupGenero.findViewById(radioButtonId)
             radioButtonText = radioButton2.text.toString()
@@ -50,7 +50,7 @@ class DatosPersonales :  AppCompatActivity()   {
         botonSiguiente.setOnClickListener{
             if (rdGroupGenero.checkedRadioButtonId != -1 && !editTextEdad.text.isEmpty()) {
                 // Al menos un radio button ha sido seleccionado y el edit text no está vacío
-                val radioButtonId: Int = rdGroupGenero.getCheckedRadioButtonId()
+                val radioButtonId: Int = rdGroupGenero.checkedRadioButtonId
                 val radioButton: View = rdGroupGenero.findViewById(radioButtonId)
                 val radioButton2: RadioButton = rdGroupGenero.findViewById(radioButtonId)
                 radioButtonText = radioButton2.text.toString()

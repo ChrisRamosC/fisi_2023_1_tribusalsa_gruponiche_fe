@@ -18,7 +18,7 @@ class ConviertetePremium : AppCompatActivity() {
             finish()
         }
 
-        binding.btnSucribeteAhora.setOnClickListener(){
+        binding.btnSucribeteAhora.setOnClickListener {
             goToPagoPaypal()
         }
     }

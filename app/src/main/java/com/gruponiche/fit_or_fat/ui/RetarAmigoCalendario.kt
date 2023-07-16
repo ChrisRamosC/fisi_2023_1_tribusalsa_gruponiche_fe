@@ -33,7 +33,7 @@ class RetarAmigoCalendario : AppCompatActivity() {
         setContentView(binding.root)
         val bundle = intent.extras
         amigo = (bundle?.getSerializable("datos_amigo") as? Amigo)!!
-        rutina = (bundle?.getSerializable("datos_rutina") as? RutinaResponse)!!
+        rutina = (bundle.getSerializable("datos_rutina") as? RutinaResponse)!!
 
 
         var calendar = Calendar.getInstance()

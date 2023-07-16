@@ -1,7 +1,9 @@
 package com.gruponiche.fit_or_fat.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +22,7 @@ class RetarAmigo : AppCompatActivity(), OnAmigosLoadedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRetarAmigoBinding.inflate(layoutInflater)
+
 
         obtenerAmigos()
 //        initRecycleViewAmigo()
@@ -61,7 +64,19 @@ class RetarAmigo : AppCompatActivity(), OnAmigosLoadedListener {
     }
 
     fun obtenerAmigos(){
+<<<<<<< Updated upstream
         AmigoProvider.getAmigosbyUserID(7, this)
+=======
+        // Obtener una instancia de Shared Preferences
+        val sharedPreferences3 = getSharedPreferences("usuario", Context.MODE_PRIVATE)
+
+        // Recuperar un valor entero almacenado
+        val userId = sharedPreferences3.getInt("id_usuario", 7)
+        Log.d("iduser", userId.toString())
+
+        AmigoProvider.getAmigosbyUserID(userId, this)
+>>>>>>> Stashed changes
     }
+
 
 }
