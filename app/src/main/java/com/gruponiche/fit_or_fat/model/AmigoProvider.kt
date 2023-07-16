@@ -19,14 +19,11 @@ class AmigoProvider {
                     val lista = response.body()!!
                     val amigos = mutableListOf<Amigo>()
                     for(u in lista) {
-<<<<<<< Updated upstream
                         amigos.add(Amigo(u.nombre))
-=======
                         if (u.imagen != null && u.imagen != "")
                             amigos.add(Amigo(u.nombre,u.imagen))
                         else
                             amigos.add(Amigo(u.nombre))
->>>>>>> Stashed changes
                     }
                     listener.onAmigosLoaded(amigos)
                 }

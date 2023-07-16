@@ -64,9 +64,6 @@ class RetarAmigo : AppCompatActivity(), OnAmigosLoadedListener {
     }
 
     fun obtenerAmigos(){
-<<<<<<< Updated upstream
-        AmigoProvider.getAmigosbyUserID(7, this)
-=======
         // Obtener una instancia de Shared Preferences
         val sharedPreferences3 = getSharedPreferences("usuario", Context.MODE_PRIVATE)
 
@@ -75,7 +72,6 @@ class RetarAmigo : AppCompatActivity(), OnAmigosLoadedListener {
         Log.d("iduser", userId.toString())
 
         AmigoProvider.getAmigosbyUserID(userId, this)
->>>>>>> Stashed changes
     }
 
 
