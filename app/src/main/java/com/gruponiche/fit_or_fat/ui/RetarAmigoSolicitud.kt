@@ -22,7 +22,7 @@ class RetarAmigoSolicitud : AppCompatActivity() {
 
         val bundle = intent.extras
         amigo = (bundle?.getSerializable("datos_amigo") as? Amigo)!!
-        rutina = (bundle?.getSerializable("datos_rutina") as? RutinaResponse)!!
+        rutina = (bundle.getSerializable("datos_rutina") as? RutinaResponse)!!
         fecha = bundle.getString("fecha")!!
         hora = bundle.getString("hora")!!
 

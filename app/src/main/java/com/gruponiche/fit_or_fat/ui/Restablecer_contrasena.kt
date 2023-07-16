@@ -57,7 +57,7 @@ class Restablecer_contrasena : AppCompatActivity() {
             Toast.makeText(applicationContext,"Ingrese todos los campos", Toast.LENGTH_SHORT).show()
             return
         }
-        val intent = getIntent()
+        val intent = intent
         val value = intent.getStringExtra("codigo").toString()
 
         val call=api1RegistroDeDatos.postRestablecerContrasena(editContrasena,value)

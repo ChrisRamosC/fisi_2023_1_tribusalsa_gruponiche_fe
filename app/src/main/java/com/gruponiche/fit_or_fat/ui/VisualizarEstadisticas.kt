@@ -24,19 +24,19 @@ class VisualizarEstadisticas : AppCompatActivity() {
             replace(R.id.fragmentContainerViewVisualizarEstadisticas, semanaFragment)
             commit()
         }
-        binding.btnSemana.setOnClickListener(){
+        binding.btnSemana.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fragmentContainerViewVisualizarEstadisticas, semanaFragment)
                 commit()
             }
         }
-        binding.btnMes.setOnClickListener(){
+        binding.btnMes.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fragmentContainerViewVisualizarEstadisticas, mesesFragment)
                 commit()
             }
         }
-        binding.btnAnio.setOnClickListener(){
+        binding.btnAnio.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fragmentContainerViewVisualizarEstadisticas, aniosFragment)
                 commit()

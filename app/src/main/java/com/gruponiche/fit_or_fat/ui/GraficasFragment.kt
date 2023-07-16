@@ -15,33 +15,33 @@ class GraficasFragment : Fragment(R.layout.fragment_graficas) {
         val btnEstadisticas = requireView().findViewById<ConstraintLayout>(R.id.btnEstadisticas)
         val btnIndicadores = requireView().findViewById<ConstraintLayout>(R.id.btnIndicadoresSalud)
 
-        btnProgreso.setOnClickListener(){
+        btnProgreso.setOnClickListener {
             goToProgreso()
         }
 
-        btnEstadisticas.setOnClickListener(){
+        btnEstadisticas.setOnClickListener {
             goToEstadisticas()
         }
 
-        btnIndicadores.setOnClickListener(){
+        btnIndicadores.setOnClickListener {
             goToIndicadores()
         }
     }
 
 
     private fun goToProgreso(){
-        val intent = Intent (getActivity(), VisualizarProgreso::class.java)
-        getActivity()?.startActivity(intent)
+        val intent = Intent (activity, VisualizarProgreso::class.java)
+        activity?.startActivity(intent)
     }
 
     private fun goToEstadisticas(){
-        val intent = Intent (getActivity(), VisualizarEstadisticas::class.java)
-        getActivity()?.startActivity(intent)
+        val intent = Intent (activity, VisualizarEstadisticas::class.java)
+        activity?.startActivity(intent)
     }
 
     private fun goToIndicadores(){
-        val intent = Intent (getActivity(), VisualizarIndicadoresSalud::class.java)
-        getActivity()?.startActivity(intent)
+        val intent = Intent (activity, VisualizarIndicadoresSalud::class.java)
+        activity?.startActivity(intent)
     }
 
 }

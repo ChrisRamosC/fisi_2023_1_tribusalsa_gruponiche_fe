@@ -14,7 +14,7 @@ class PagoCompletado : AppCompatActivity() {
         binding = ActivityPagoCompletadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnFinalizar.setOnClickListener(){
+        binding.btnFinalizar.setOnClickListener {
             goToPantallaInicial()
         }
     }

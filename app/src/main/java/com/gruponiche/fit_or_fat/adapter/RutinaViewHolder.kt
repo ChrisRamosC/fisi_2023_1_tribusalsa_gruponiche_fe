@@ -12,8 +12,20 @@ class RutinaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val binding = ItemRutinaBinding.bind(view)
 
     fun render(rutinaModel: RutinaResponse, onClickListener: (RutinaResponse) -> Unit) {
-        binding.tvRutinaNombre.text = rutinaModel.nombreRutina.capitalize(Locale.ROOT)
-        binding.tvRutinaInfo.text = "| " + rutinaModel.nivelRutina.capitalize(Locale.ROOT) + " | " + rutinaModel.tipoRutina.capitalize(Locale.ROOT)
+        binding.tvRutinaNombre.text = rutinaModel.nombreRutina.replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase(
+                Locale.ROOT
+            ) else it.toString()
+        }
+        binding.tvRutinaInfo.text = "| " + rutinaModel.nivelRutina.replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase(
+                Locale.ROOT
+            ) else it.toString()
+        } + " | " + rutinaModel.tipoRutina.replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase(
+                Locale.ROOT
+            ) else it.toString()
+        }
         Glide.with(binding.ivRutina.context).load(rutinaModel.linkImagen).into(binding.ivRutina)
         itemView.setOnClickListener {
             onClickListener(rutinaModel)

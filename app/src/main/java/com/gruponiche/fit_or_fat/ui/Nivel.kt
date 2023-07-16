@@ -30,7 +30,7 @@ class Nivel : AppCompatActivity() {
         btnFlechaMetricas.setOnClickListener {
 
             // Al menos un radio button ha sido seleccionado y el edit text no está vacío
-            val radioButtonId: Int = rdGroupActividad.getCheckedRadioButtonId()
+            val radioButtonId: Int = rdGroupActividad.checkedRadioButtonId
             val radioButton2: RadioButton = rdGroupActividad.findViewById(radioButtonId)
             radioButtonText = radioButton2.text.toString()
 
@@ -48,7 +48,7 @@ class Nivel : AppCompatActivity() {
         btnSiguienteObjetivo.setOnClickListener {
             if (rdGroupActividad.checkedRadioButtonId != -1 ) {
                 // Al menos un radio button ha sido seleccionado y el edit text no está vacío
-                val radioButtonId: Int = rdGroupActividad.getCheckedRadioButtonId()
+                val radioButtonId: Int = rdGroupActividad.checkedRadioButtonId
                 val radioButton: View = rdGroupActividad.findViewById(radioButtonId)
                 val radioButton2: RadioButton = rdGroupActividad.findViewById(radioButtonId)
                 radioButtonText = radioButton2.text.toString()

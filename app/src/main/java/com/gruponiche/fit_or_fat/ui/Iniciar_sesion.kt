@@ -125,10 +125,11 @@ class Iniciar_sesion : AppCompatActivity() {
                             val editor = sharedPreferencesUsuario.edit()
                             // Guardar el usuario y el ID en los Shared Preferences
                             editor.putInt("id_usuario", loginResponse.usuario.codigo)
+                            Log.d("iduser",loginResponse.usuario.codigo.toString())
                             editor.putString("nombre_usuario", loginResponse.usuario.nombre)
                             // Aplicar los cambios
                             editor.apply()
-                            goToPatanllaTerminos();
+                            goToPatanllaTerminos()
                         } else {
                             // Obtener una instancia de SharedPreferences.Editor para modificar los datos
                             val sharedPreferencesUsuario =
@@ -137,6 +138,7 @@ class Iniciar_sesion : AppCompatActivity() {
                             val editor = sharedPreferencesUsuario.edit()
                             // Guardar el usuario y el ID en los Shared Preferences
                             editor.putInt("id_usuario", loginResponse.usuario.codigo)
+                            Log.d("iduser",loginResponse.usuario.codigo.toString())
                             editor.putString("nombre_usuario", loginResponse.usuario.nombre)
                             Log.i("nombre1", loginResponse.usuario.nombre)
                             editor.apply()

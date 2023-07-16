@@ -32,7 +32,7 @@ class ComenzarRutina2 : AppCompatActivity() {
 
         val bundle = intent.extras
         val listaEjercicio = (bundle?.getSerializable("lista_ejercicios") as? List<EjercicioResponse>)!!
-        val nombreRutina = bundle?.getString("nombre_rutina")
+        val nombreRutina = bundle.getString("nombre_rutina")
         val cantidadEjercicios = listaEjercicio.size
         val actual = bundle.getInt("actual")
         if (actual < cantidadEjercicios) {

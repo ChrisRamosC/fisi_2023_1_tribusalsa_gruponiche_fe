@@ -20,7 +20,7 @@ class RetarAmigoSeleccion : AppCompatActivity() {
 
         val bundle = intent.extras
         amigo = (bundle?.getSerializable("datos_amigo") as? Amigo)!!
-        rutina = (bundle?.getSerializable("datos_rutina") as? RutinaResponse)!!
+        rutina = (bundle.getSerializable("datos_rutina") as? RutinaResponse)!!
 
         binding.tvNombreAmigo.text = amigo.nombre
         Glide.with(binding.ivFotoAmigo.context).load(amigo.imgAmigo)

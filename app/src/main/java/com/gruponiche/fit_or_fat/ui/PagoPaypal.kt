@@ -16,8 +16,8 @@ import com.paypal.checkout.createorder.OrderIntent
 import com.paypal.checkout.createorder.UserAction
 import com.paypal.checkout.error.OnError
 import com.paypal.checkout.order.Amount
-import com.paypal.checkout.order.AppContext
 import com.paypal.checkout.order.Order
+import com.paypal.checkout.order.AppContext
 import com.paypal.checkout.order.PurchaseUnit
 import com.paypal.checkout.paymentbutton.PayPalButton
 

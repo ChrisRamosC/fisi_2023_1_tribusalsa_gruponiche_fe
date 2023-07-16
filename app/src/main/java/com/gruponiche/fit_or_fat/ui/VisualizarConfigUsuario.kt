@@ -35,7 +35,7 @@ class VisualizarConfigUsuario:AppCompatActivity() {
             goToLogin()
         }
         */
-        binding.conviertetePremium.setOnClickListener(){
+        binding.conviertetePremium.setOnClickListener {
             goToConviertetePremium()
         }
 
